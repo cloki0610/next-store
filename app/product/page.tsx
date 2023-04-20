@@ -16,8 +16,11 @@ export default function ProductPage({
     const price_id = searchParams.price_id;
     const product = useAppSelector((state: RootState) => state.cart.product);
     const { name, description, amount, productInfo } = product;
-
-    const { images } = productInfo as Stripe.Product;
+    let images = [""];
+    if (productInfo && typeof productInfo !== "string") {
+        const info = productInfo as Stripe.Product;
+        images = info.images;
+    }
 
     const handleAddToCart = () => {
         const newItem = {
