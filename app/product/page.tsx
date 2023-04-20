@@ -11,6 +11,8 @@ export default function ProductPage({
 }: {
     searchParams: { price_id: string };
 }) {
+    if (!product) return <div>No product</div>;
+
     const router = useRouter();
     const dispatch = useAppDispatch();
     const price_id = searchParams.price_id;
