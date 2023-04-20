@@ -14,7 +14,7 @@ export default function ProductCard({ product }: { product: Stripe.Price }) {
     const onProductClick = () => {
         const newProduct = { name, description, price_id, amount, productInfo };
         dispatch(setProduct({ newProduct }));
-        router.push(`/product?price_id=${price_id}`);
+        router.push(`/${price_id}`);
     };
 
     return (

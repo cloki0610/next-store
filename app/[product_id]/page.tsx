@@ -7,15 +7,13 @@ import { addItemToCart } from "../(store)/cart";
 import { RootState, useAppSelector, useAppDispatch } from "../(store)/store";
 
 export default function ProductPage({
-    searchParams,
+    params,
 }: {
-    searchParams: { price_id: string };
+    params: { price_id: string };
 }) {
-    if (!product) return <div>No product</div>;
-
     const router = useRouter();
     const dispatch = useAppDispatch();
-    const price_id = searchParams.price_id;
+    const price_id = params.price_id;
     const product = useAppSelector((state: RootState) => state.cart.product);
     const { name, description, amount, productInfo } = product;
     let images = [""];
