@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "Retry - serve anything a second chance",
+    title: "Cycle - online store template",
     description: "A mock store for practice purposes",
     icons: {
         icon: "/favicon.ico",
