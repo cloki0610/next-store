@@ -8,8 +8,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "Cycle - online store template",
-    description: "A mock store for practice purposes",
+    title: "Buy It Now - online store template",
+    description: "Anywhere, but now",
     icons: {
         icon: "/favicon.ico",
     },

@@ -8,21 +8,18 @@ import Modal from "./Modal";
 
 export default function Header() {
     const dispatch = useAppDispatch();
-    const openModal = useAppSelector(
-        (state: RootState) => state.cart.openModal
-    );
     const cartItems = useAppSelector((state: RootState) => state.cart.cart);
 
     return (
-        <header className="sticky top-0 p-4 sm:p-6 bg-primary shadow-md z-50 text-2xl sm:text-3xl md:text-4xl flex item-center justify-between">
-            {openModal && <Modal />}
+        <header className="sticky top-0 p-4 sm:p-6 bg-white shadow-md z-50 text-2xl sm:text-3xl md:text-4xl flex item-center justify-between">
+            <Modal />
             <Link
                 href="/"
                 className="after:content-[''] after:block after:mt-1 after:w-0 after:h-[5px] after:bg-secondary after:duration-300 hover:after:w-full"
             >
-                <h1 className="text-secondary uppercase cursor-pointer">
+                <h1 className="text-primary cursor-pointer">
                     <i className="fa-solid fa-gear fa-spin"></i>
-                    <span className="pl-3 font-bold">Cycle</span>
+                    <span className="pl-3 font-bold">BuyItNow</span>
                 </h1>
             </Link>
             <div
@@ -34,7 +31,7 @@ export default function Header() {
                         <p className="text-xs sm:text-sm">{cartItems.length}</p>
                     </div>
                 )}
-                <i className="fa-solid fa-cart-shopping text-secondary cursor-pointer hover:opacity-70 hover:scale-110"></i>
+                <i className="fa-solid fa-cart-shopping text-primary cursor-pointer hover:opacity-70 hover:scale-110"></i>
             </div>
         </header>
     );

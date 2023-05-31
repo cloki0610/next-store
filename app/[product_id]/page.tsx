@@ -39,10 +39,11 @@ export default function ProductPage({
             <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-[1000px] mx-auto">
                 <div className="md:p-2 md:shadow">
                     <Image
-                        src={images[0]}
+                        src={images[0] || ""}
                         alt={name}
                         width={200}
                         height={200}
+                        priority
                         className="w-full h-full object-cover"
                     />
                 </div>
